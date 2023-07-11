@@ -19,7 +19,7 @@ export const App = () => {
   }, [dispatch]);
 
   return (
-    <section>
+    <section className="main">
       <h1>Phonebook</h1>
       <ContactForm />
       <h2>Contacts</h2>

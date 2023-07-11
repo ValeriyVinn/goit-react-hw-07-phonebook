@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import { useSelector } from 'react-redux';
 import { selectContacts, selectContactsFilter } from '../../redux/selectors';
 import { Contact } from '../Contact/Contact';
-import './ContactList.module.css';
+import css from './ContactList.module.css';
 
 export const ContactList = () => {
   const filter = useSelector(selectContactsFilter).toLowerCase();
@@ -22,7 +22,7 @@ export const ContactList = () => {
   return (
     <>
       {contacts && (
-        <ul>
+        <ul className={css.list}>
           {filteredContacts.map(({ id, name, phone }) => {
             return <Contact key={id} id={id} name={name} phone={phone} />;
           })}
